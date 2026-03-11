@@ -2,9 +2,21 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { useEffect } from 'react'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    const getEvents = async () => {
+      const results = await fetch('/events')
+      const data = await results.json()
+
+      console.log(data)
+    }
+
+    getEvents()
+  }, [])
 
   return (
     <>
