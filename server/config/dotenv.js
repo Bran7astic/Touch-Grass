@@ -1,4 +1,4 @@
 import dotenv from 'dotenv'
 dotenv.config({ path: '../.env' })
 
-console.log("dotnev configured!")
+console.log("dotenv loaded!")

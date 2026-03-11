@@ -1,7 +1,11 @@
 import express from 'express'
 import './config/dotenv.js'
+import eventsRouter from './routes/eventRoutes.js'
 
 const app = express()
+
+
+app.use('/events', eventsRouter)
 
 app.get('/', (req, res) => {
     res.status(200).send('<h1 style="text-align: center; margin-top:50px">Touch Grass</h1>')
