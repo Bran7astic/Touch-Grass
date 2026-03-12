@@ -21,7 +21,7 @@ export default function Home() {
     }, [events])
 
     return(
-        <div>
+        <div class = "eventsContainer">
             {events && (
                 events.map((event) => (
                     <Card props={event}/> 

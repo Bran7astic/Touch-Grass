@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react"
 import { useParams } from "react-router"
+import DetailCard from "../components/DetailCard";
 
 export default function Details() {
 
@@ -20,10 +21,8 @@ export default function Details() {
 
     return(
         <div>
-            <p>Details page for id={id}</p>
             {event && (
-                <p>{event.name}</p>
-            
+                <DetailCard props={event}/>
             )}
         </div>
     )

@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { useEffect } from "react"
 import { useNavigate } from "react-router"
-import { Calendar, MapPin } from 'lucide-react'
+import { Calendar, Link, MapPin } from 'lucide-react'
 
-export default function Card({props}) {
+export default function DetailCard({props}) {
 
     const [dateString, setDateString] = useState('')
     const navigate = useNavigate()
@@ -15,16 +15,14 @@ export default function Card({props}) {
     }, [props])
 
     return(
-        <div
-            className="eventCard"
-            onClick={() => {navigate(`/view/${props.id}`)}}
-        >
+        <div className="detailCard">
             <img 
                 src={props.image} 
-                className="cardImage"
+                className="detailCardImage"
             />
 
-            <div className="cardContainer">
+            <div className="detailCardContainer">
+                
                 <h2>{props.name}</h2>
 
                 <div className="iconContainer">
@@ -37,7 +35,22 @@ export default function Card({props}) {
                     <p>{props.location}</p>
                 </div>
 
-                <p>{props.description}</p>
+                <div 
+                    style={{
+                        width: "60%", 
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "20px",
+                    }}
+                >
+                    <p>{props.description}</p>
+
+                    <div className="iconContainer">
+                        <Link/>
+                        <a href={props.link}>{props.link}</a>
+                    </div>
+                </div>
+
             </div>
 
         </div>
