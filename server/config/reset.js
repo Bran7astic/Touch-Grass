@@ -1,5 +1,5 @@
-import { pool } from "./database.js"
 import './dotenv.js'
+import { pool } from "./database.js"
 import eventData from "../data/eventsData.js"
 
 const createEventsTable = async () => {

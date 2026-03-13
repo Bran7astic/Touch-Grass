@@ -26,6 +26,16 @@ const eventData = [
         "image": "https://images.squarespace-cdn.com/content/v1/654fbdcd4c023d4139c37867/1699965506180-XNJJO2MWNUDX094FTD5E/JAPANFes_June10-47.jpg",
         "link": "https://www.japanfes.com",
     },
+    {
+        "id": 3,
+        "name": "Bryant Park Winter Village",
+        "location": "New York, NY 10018",
+        "description": `The Bank of America Winter Village at Bryant Park in NYC is a premier holiday destination, open daily from October 24, 2025, through early January 2026.`,
+        "date": "2025-10-24",
+        "image": "https://bryantpark.org/images/cache/assets/uploads/images/general/Winter-Village_Bryant-Park_2024-12-19_Colin-Miller_006_1-900x514.jpg",
+        "link": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+    },
+    
 ];
 
 export default eventData;
